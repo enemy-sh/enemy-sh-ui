@@ -1,11 +1,9 @@
-import Image from "next/image";
-import Nav from "@/components/nav";
-import { HeroSection } from "@/components/hero-section";
-export default function Home() {
+import { LandingPageComponent } from '../components/landing-page'
+
+export default function Page() {
   return (
     <div>
-      <Nav />
-      <HeroSection />
+      <LandingPageComponent />
     </div>
-  );
+  )
 }
