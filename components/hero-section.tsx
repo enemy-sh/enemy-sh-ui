@@ -9,17 +9,12 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
 export function HeroSection() {
-  useEffect(() => {
-    // Animate the hero description and button
-    animate('.hero-description', { opacity: [0, 1], y: [50, 0] }, { delay: 0.4, duration: 0.6 });
-    animate('.hero-button', { opacity: [0, 1], y: [50, 0] }, { delay: 0.6, duration: 0.6 });
-  }, []);
 
   const settings = {
     dots: false,
     infinite: true,
     speed: 3500,
-    slidesToShow:12,
+    slidesToShow:10,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0,
@@ -66,11 +61,11 @@ export function HeroSection() {
   ];
 
   return (
-    <section className="h-screen flex flex-col items-center justify-center bg-black text-white relative overflow-hidden">
-      <div className="text-center px-4 z-10 mb-20">
-        <h1 className="hero-title text-5xl md:text-7xl font-bold mb-6">
+    <section className="h-screen flex flex-col items-center justify-center bg-slate-100 text-black relative overflow-hidden">
+      <div className="text-center px-4 z-10 mb-20 mt-40">
+        <h1 className="hero-title text-5xl md:text-6xl font-bold mb-4">
           From zero to{' '}
-          <span className="text-gray-300">
+          <span className="text-gray-900">
             <Typewriter
               words={['CI/CD Pipelines', 'Infrastructure as Code', 'Containerization', 'Monitoring & Logging', 'Cloud Automation', 'Security & Compliance']}
               loop={0}
@@ -82,10 +77,10 @@ export function HeroSection() {
             />
           </span>
         </h1>
-        <p className="hero-description text-lg md:text-md mb-8">
+        <p className="hero-description text-md md:text-md mb-8">
           Streamline your operations with our expert DevOps solutions.
         </p>
-        <Link href="#services" className="hero-button inline-flex items-center bg-purple-800 text-white px-6 py-3 font-semibold hover:bg-purple-700 transition-all duration-300">
+        <Link href="#services" className="inline-flex items-center rounded-lg bg-purple-500 px-6 py-3 font-semibold hover:bg-purple-700 transition-all duration-300 text-white">
           Explore DevOps Solutions
         </Link>
       </div>
@@ -93,14 +88,13 @@ export function HeroSection() {
         <Slider {...settings}>
           {devOpsPlatforms.map((platform, index) => (
             <div key={index} className="px-2">
-              <div className="flex items-center justify-center bg-white h-32 p-4 rounded-lg border border-gray-200">
-                <img src={platform.logo} alt={platform.name} className="w-full h-16 object-contain" />
+              <div className="flex items-center justify-center  h-32 p-4 rounded-lg">
+                <img src={platform.logo} alt={platform.name} className="w-full h-12 object-contain" />
               </div>
             </div>
           ))}
         </Slider>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
     </section>
   )
 }
