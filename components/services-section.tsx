@@ -2,16 +2,17 @@ import React from "react";
 import ServicesCarousel from "./ui/services-carousel";
 
 const services = [
-    { title: "Cloud Infrastructure Setup", description: "We design and implement scalable cloud infrastructures tailored to your business.", categories: ["Cloud Services"] },
-    { title: "Continuous Integration/Continuous Deployment", description: "We set up CI/CD pipelines to automate and streamline your software delivery process.", categories: ["DevOps"] },
-    { title: "Infrastructure as Code", description: "We use IaC tools to provision and manage your infrastructure efficiently.", categories: ["DevOps"] },
-    { title: "Cloud Migration Services", description: "We help you migrate your existing workloads to a cloud environment with minimal downtime.", categories: ["Cloud Services"] },
-    { title: "DevOps Consulting", description: "We offer tailored DevOps strategies to improve collaboration and workflow efficiency.", categories: ["Consulting", "DevOps"] },
-    { title: "Monitoring and Logging", description: "We set up comprehensive monitoring and logging solutions to keep your systems healthy.", categories: ["Operations"] },
-    { title: "Cloud Security Services", description: "We ensure your cloud environments are secure with the latest security best practices.", categories: ["Security", "Cloud Services"] },
-    { title: "Cost Optimization", description: "We analyze and optimize your cloud spending to ensure you get the best value.", categories: ["Performance"] },
-    { title: "Disaster Recovery Planning", description: "We create robust disaster recovery plans to ensure business continuity in case of failures.", categories: ["Business Continuity"] },
-    { title: "Kubernetes Orchestration", description: "We deploy and manage Kubernetes clusters to automate containerized application management.", categories: ["Container Management"] }
+    { title: "CI/CD Pipeline Automation", description: "We specialize in building automated CI/CD pipelines to streamline your software delivery.", categories: ["DevOps"] },
+    { title: "Kubernetes Orchestration", description: "Our experts deploy and manage Kubernetes clusters for efficient container management.", categories: ["Container Management", "DevOps"] },
+    { title: "Infrastructure as Code", description: "We utilize IaC tools for automated provisioning and infrastructure management.", categories: ["DevOps"] },
+    { title: "Cloud Migration and Integration", description: "Seamless migration and integration of your services to the cloud with DevOps best practices.", categories: ["DevOps", "Cloud Services"] },
+    { title: "DevOps Strategy Consulting", description: "Tailored DevOps strategies to enhance your development and operations collaboration.", categories: ["Consulting", "DevOps"] },
+    { title: "Monitoring, Observability, and Metrics", description: "Implement comprehensive monitoring and observability to gain insights into your system's performance.", categories: ["Operations", "DevOps"] },
+    { title: "Cloud Security and Compliance", description: "Implementing DevSecOps practices to ensure cloud security and compliance.", categories: ["Security", "DevOps"] },
+    { title: "Cost Management and Optimization", description: "Optimize your cloud costs with our expert analysis and DevOps strategies.", categories: ["Performance", "DevOps"] },
+    { title: "Serverless Application Development", description: "Design and deploy serverless applications for scalable and cost-effective solutions.", categories: ["DevOps", "Serverless"] },
+    { title: "Microservices Architecture", description: "Transition to a microservices architecture for flexibility and rapid deployment cycles.", categories: ["Architecture", "DevOps"] },
+    { title: "Containerization and Management", description: "Efficiently containerize applications to enhance reliability and scalability.", categories: ["Container Management", "DevOps"] }
 ]
 export default function ServicesSection() {
     return (
