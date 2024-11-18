@@ -162,7 +162,7 @@ export default function CtaSection() {
 
                     <div className="w-full flex flex-row">
                         <Button
-                        className="bg-slate-800 hover:bg-slate-700 rounded-none"
+                        className="bg-black hover:bg-gray-700 rounded-none"
                         type="submit"
                         >
                         Submit

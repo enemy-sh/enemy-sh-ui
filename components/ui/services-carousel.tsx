@@ -47,7 +47,7 @@ export default function ServicesCarousel({ services }: ServicesCarouselProps) {
                   </div>
                   <div className="flex flex-row items-center justify-start w-full gap-2">
                     {service.categories.map((category, index) => (
-                      <div key={index} className="bg-slate-800 transition-all  text-slate-200 px-4 py-1 text-xs">{category}</div>
+                      <div key={index} className="bg-black transition-all  text-slate-200 px-4 py-1 text-xs">{category}</div>
                     ))}
                   </div>
                 </div>
