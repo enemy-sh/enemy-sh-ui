@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="0a-icon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="0.56140411"
+     inkscape:cx="155.85921"
+     inkscape:cy="586.92125"
+     inkscape:window-width="1350"
+     inkscape:window-height="1041"
+     inkscape:window-x="417"
+     inkscape:window-y="89"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g17" />
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="copy_rotate"
+       starting_point="0,0"
+       origin="20.115906,256.00001"
+       id="path-effect18"
+       is_visible="true"
+       lpeversion="1.2"
+       lpesatellites=""
+       method="kaleidoskope"
+       num_copies="3"
+       starting_angle="0"
+       rotation_angle="120"
+       gap="-0.01"
+       copies_to_360="true"
+       mirror_copies="false"
+       split_items="false"
+       link_styles="false" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect17"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 | F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,10,0,1"
+       radius="10"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <rect
+       x="141.06765"
+       y="200.89545"
+       width="257.57442"
+       height="177.5941"
+       id="rect1" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g17"
+       transform="matrix(0.91412476,0,0,0.91412476,235.20455,40.323694)">
+      <rect
+         style="display:inline;fill:#efefef;fill-opacity:1;stroke-width:20"
+         id="rect3"
+         width="512"
+         height="512"
+         x="0"
+         y="0"
+         transform="matrix(1.0939426,0,0,1.0939426,-257.30027,-44.111806)" />
+      <g
+         id="g3"
+         transform="matrix(0.84054283,0,0,0.84054283,3.6274952,37.621927)">
+        <path
+           style="font-size:96px;font-family:'Baskervville SC';-inkscape-font-specification:'Baskervville SC';white-space:pre;fill:#343434;fill-opacity:1;stroke-width:331.596"
+           d="m 161.75457,284.14048 c 11.16941,14.32054 22.33884,28.64267 33.50782,42.96344 -9.78432,-1.49618 -19.56386,-2.99209 -29.3481,-4.48837 C 113.31981,314.5706 60.722232,306.52706 8.1266239,298.48355 l -49.2499609,85.30243 c 90.761454,11.85334 181.523747,23.70747 272.283267,35.55951 l 22.36201,-38.73328 c -24.5983,-32.15723 -49.19658,-64.31443 -73.79512,-96.47173 z"
+           id="path3" />
+        <path
+           style="font-size:96px;font-family:'Baskervville SC';-inkscape-font-specification:'Baskervville SC';white-space:pre;fill:#343434;fill-opacity:1;stroke-width:331.596"
+           d="m -41.085778,184.51847 c -55.645964,72.675 -111.294252,145.34986 -166.938112,218.0238 l 22.36201,38.73329 c 40.14808,-5.22413 80.30052,-10.4474 120.448786,-15.67172 l 8.981427,-15.56374 c -17.986621,2.51273 -35.972352,5.02786 -53.958983,7.54008 6.18787,-7.72537 12.375883,-15.45367 18.563803,-23.17894 33.264358,-41.52562 66.527367,-83.053 99.7910305,-124.58033 z"
+           id="path2" />
+        <path
+           style="font-size:96px;font-family:'Baskervville SC';-inkscape-font-specification:'Baskervville SC';white-space:pre;fill:#343434;fill-opacity:1;stroke-width:331.596"
+           d="m -18.606387,30.599433 c -15.549809,37.381332 -31.09921,74.766557 -46.648961,112.148127 l 8.986122,15.56374 c 6.81723,-16.83321 13.633503,-33.67052 20.451175,-50.50349 3.596428,9.22152 7.192674,18.44107 10.788981,27.6626 19.3300679,49.57058 38.664746,99.14149 57.996641,148.71233 H 131.46749 C 96.352094,199.65443 61.233215,115.12542 26.117649,30.599433 Z"
+           id="path1"
+           inkscape:label="path1" />
+      </g>
+    </g>
+  </g>
+</svg>

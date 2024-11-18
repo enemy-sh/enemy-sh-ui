@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Inter, Afacad_Flux, Funnel_Sans } from "next/font/google";
+import { Funnel_Sans } from "next/font/google";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -18,6 +18,8 @@ const funnelSans = Funnel_Sans({
   subsets: ['latin'],
   display: 'swap',
 })
+
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
