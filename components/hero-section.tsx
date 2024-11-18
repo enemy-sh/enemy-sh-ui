@@ -67,7 +67,7 @@ export function HeroSection() {
 
   return (
     <section className="h-screen flex flex-col items-center bg-slate-50 justify-center bg-dots text-black">
-      <div className="text-center px-4 z-10 mb-20 mt-40">
+      <div className="text-center px-4 z-10 mb-20 mt-30">
         <h1 className="hero-title text-5xl md:text-6xl font-normal mb-4">
           0 to{' '}
           <span className="text-gray-900">
