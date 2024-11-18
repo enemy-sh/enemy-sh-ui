@@ -86,16 +86,16 @@ export function HeroSection() {
           From a-z, we've got you covered.
         </p>
         <Link href="#services">
-          <div className="hero-button inline-flex items-center bg-slate-800 px-6 py-3 font-semibold hover:bg-slate-700 rounded-md transition-all duration-300 text-white">
+          <div className="hero-button inline-flex items-center bg-slate-800 px-6 py-3 font-semibold hover:bg-slate-700 transition-all duration-300 text-white">
             Explore DevOps Solutions
           </div>
         </Link>
       </div>
-      <div className="w-full relative hero-description">
+      <div className="w-full relative hero-description bg-gradient-to-r from-transparent via-white to-transparent">
         <Slider {...settings}>
           {devOpsPlatforms.map((platform, index) => (
-            <div key={index} className="px-2">
-              <div className="flex items-center justify-center h-32 p-4 rounded-lg">
+            <div key={index} className="px-2 ">
+              <div className="flex items-center justify-center h-32 p-4 rounded-lg ">
                 <img src={platform.logo} alt={platform.name} className="w-full h-12 object-contain" />
               </div>
             </div>

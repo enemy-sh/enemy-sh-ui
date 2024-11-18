@@ -37,7 +37,6 @@ export default function ServicesSection() {
             return () => observer.disconnect();
         }
     }, []);
-
     return (
         <div className="bg-slate-50 bg-dots" >
             <div ref={sectionRef} className="flex flex-col items-center justify-center min-h-screen">
