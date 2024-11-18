@@ -1,5 +1,3 @@
-// File: repos/0-a-lp/components/ui/services-carousel.tsx
-
 'use client'
 
 import React from "react";
@@ -17,7 +15,7 @@ interface ServicesCarouselProps {
 }
 
 const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,

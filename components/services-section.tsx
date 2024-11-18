@@ -39,15 +39,17 @@ export default function ServicesSection() {
     }, []);
 
     return (
-        <div ref={sectionRef} className="flex flex-col items-center justify-center min-h-screen bg-slate-50 bg-dots" >
-            <div className="flex flex-row items-start start w-5/6 h-1/2 mb-8">
-              <div className="flex flex-col items-start justify-center w-1/2 gap-2">
-                <p className="text-5xl">We will focus on everything else so you can focus on whats important.</p>
-                <p className="text-gray-700">Our wide range of services allows you to focus on your core business while we handle the rest.</p>
-              </div>
-            </div>
-            <div className="flex flex-row items-start justify-start w-5/6">
-                <ServicesCarousel services={services} />
+        <div className="bg-slate-50 bg-dots" >
+            <div ref={sectionRef} className="flex flex-col items-center justify-center min-h-screen">
+                <div className="flex flex-row items-start start w-5/6 h-1/2 mb-8">
+                <div className="flex flex-col items-start justify-center w-1/2 gap-2">
+                    <p className="text-5xl">We will focus on everything else so you can focus on whats important.</p>
+                    <p className="text-gray-700">Our wide range of services allows you to focus on your core business while we handle the rest.</p>
+                </div>
+                </div>
+                <div className="flex flex-row items-start justify-start w-5/6">
+                    <ServicesCarousel services={services} />
+                </div>
             </div>
         </div>
     )

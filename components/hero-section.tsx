@@ -10,7 +10,6 @@ import "slick-carousel/slick/slick-theme.css"
 
 export function HeroSection() {
   useEffect(() => {
-    // Animate the hero title and description
     animate('.hero-title', { opacity: [0, 1], x: [-100, 0] }, { duration: 0.8 })
     animate('.hero-description', { opacity: [0, 1], x: [-100, 0] }, { delay: 0.2, duration: 0.8 })
     animate('.hero-button', { opacity: [0, 1], y: [50, 0] }, { delay: 0.4, duration: 0.8 })
@@ -87,7 +86,7 @@ export function HeroSection() {
           From a-z, we've got you covered.
         </p>
         <Link href="#services">
-          <div className="hero-button inline-flex items-center bg-slate-800 px-6 py-3 font-semibold hover:bg-slate-700 transition-all duration-300 text-white">
+          <div className="hero-button inline-flex items-center bg-slate-800 px-6 py-3 font-semibold hover:bg-slate-700 rounded-md transition-all duration-300 text-white">
             Explore DevOps Solutions
           </div>
         </Link>
