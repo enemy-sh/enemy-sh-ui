@@ -67,7 +67,7 @@ export function HeroSection() {
 
   return (
     <section className="h-screen flex flex-col items-center bg-slate-50 justify-center bg-dots bg-top text-black">
-      <div className="text-center px-4 z-10 mb-40 mt-48">
+      <div className="text-center px-4 z-10 mb-60 mt-60">
         <h1 className="hero-title text-5xl md:text-6xl font-light mb-4">
           deploy your {' '}
           <span className='text-red-600'>enemy</span>

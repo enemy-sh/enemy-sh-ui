@@ -43,7 +43,7 @@ export default function ServicesCarousel({ services }: ServicesCarouselProps) {
                     <p className="text-gray-700 text-sm">{service.description}</p>
                   </div>
                   <div className="flex flex-row items-center justify-start w-full gap-2">
-                  <Button variant={'ghost'}>Learn More</Button>
+                  <Button variant={'ghost'}>learn more</Button>
                   </div>
                   <div className="flex flex-row items-center justify-start w-full gap-2">
                     {service.categories.map((category, index) => (
