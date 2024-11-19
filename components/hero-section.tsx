@@ -67,36 +67,36 @@ export function HeroSection() {
 
   return (
     <section className="h-screen flex flex-col items-center bg-slate-50 justify-center bg-dots text-black">
-      <div className="text-center px-4 z-10 mb-20 mt-30">
-        <h1 className="hero-title text-5xl md:text-6xl font-normal mb-4">
-          0 to{' '}
-          <span className="text-gray-900">
-            <Typewriter
-              words={['CI/CD Pipelines', 'Infrastructure as Code', 'Containerization', 'Monitoring & Logging', 'Cloud Automation', 'Security & Compliance']}
-              loop={0}
-              cursor
-              cursorStyle="_"
-              typeSpeed={70}
-              deleteSpeed={50}
-              delaySpeed={1000}
-            />
-          </span>
+      <div className="text-center px-4 z-10 mb-40 mt-48">
+        <h1 className="hero-title text-5xl md:text-6xl font-light mb-4">
+          deploy your {' '}
+          <span className='text-red-600'>enemy</span>
         </h1>
         <p className="hero-description text-gray-800 text-md md:text-md mb-8">
-          From a-z, we've got you covered.
+          <Typewriter
+            words={[
+              "turning challenges into allies",
+            ]}
+            cursor
+            cursorStyle="_"
+            typeSpeed={100}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            loop
+          />
         </p>
         <Link href="#services">
-          <div className="hero-button inline-flex items-center bg-black px-6 py-3 font-semibold hover:bg-gray-700 transition-all duration-300 text-white">
-            Explore DevOps Solutions
+          <div className="hero-button inline-flex items-center bg-black px-4 py-2 font-normal hover:bg-gray-700 transition-all duration-300 text-white">
+            get started
           </div>
         </Link>
       </div>
-      <div className="w-full relative hero-description bg-gradient-to-r from-transparent via-white to-transparent">
+      <div className="w-full relative hero-description">
         <Slider {...settings}>
           {devOpsPlatforms.map((platform, index) => (
             <div key={index} className="px-2 ">
               <div className="flex items-center justify-center h-22 p-4 rounded-lg ">
-                <img src={platform.logo} alt={platform.name} className="w-full h-12 object-contain" />
+                <img src={platform.logo} alt={platform.name} className="w-full h-10 object-contain" />
               </div>
             </div>
           ))}

@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://cloudconvert.com/
+HostUrl=https://us-east.storage.cloudconvert.com/tasks/b2ed5a3b-72cc-45be-b48b-b76a093c04a9/enemy.sh.pfp.ico.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241119%2Fva%2Fs3%2Faws4_request&X-Amz-Date=20241119T182601Z&X-Amz-Expires=86400&X-Amz-Signature=a75e1fe4f580a7d4e70cbfe63e379cefa1a6bb01b6bf3cd5c035b2904aef74da&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22enemy.sh.pfp.ico.ico%22&response-content-type=image%2Fvnd.microsoft.icon&x-id=GetObject
