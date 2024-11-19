@@ -38,7 +38,7 @@ export default function ServicesSection() {
         }
     }, []);
     return (
-        <div className="bg-slate-50 bg-dots" >
+        <div className="bg-slate-50 bg-dots bg-bottom" >
             <div ref={sectionRef} className="flex flex-col items-center justify-center min-h-screen">
                 <div className="flex flex-row items-start start w-5/6 h-1/2 mb-8">
                 <div className="flex flex-col items-start justify-center w-1/2 gap-2">

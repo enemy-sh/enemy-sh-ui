@@ -89,7 +89,7 @@ export default function CtaSection() {
     }, []);
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-slate-50 bg-dots" >
+        <div className="flex flex-col items-center justify-center min-h-screen bg-slate-50 bg-dots bg-top" >
             <div ref={sectionRef} className="flex flex-row-reverse items-start justify-center w-5/6 h-1/2 mb-8">
                 <div className="flex items-center justify-center w-5/6">
                 <Form {...form}>
