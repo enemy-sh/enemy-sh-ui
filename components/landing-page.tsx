@@ -1,6 +1,7 @@
-import { HeroSection } from './hero-section'
-import ServicesSection from './services-section'
 import Nav from './nav'
+import { HeroSection } from './hero-section'
+import InfoSection from './info-section'
+import ServicesSection from './services-section'
 import CtaSection from './cta-section'
 import Footer from './footer'
 
@@ -10,6 +11,7 @@ export function LandingPageComponent() {
       <main>
         <Nav />
         <HeroSection />
+        <InfoSection />
         <ServicesSection />
         <CtaSection />
         <Footer />

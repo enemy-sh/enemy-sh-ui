@@ -89,13 +89,13 @@ export default function CtaSection() {
     }, []);
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-slate-50 bg-dots bg-top" >
+        <div className="flex flex-col items-center justify-center min-h-screen bg-slate-50 bg-dots bg-bottom" >
             <div ref={sectionRef} className="flex flex-row-reverse items-start justify-center w-5/6 h-1/2 mb-8">
                 <div className="flex items-center justify-center w-5/6">
                 <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5 bg-white rounded-none font-normal p-6 shadow-lg">
                     <div className="flex flex-row items-center justify-between">
-                        <span className="text-xl font-normal">Contact us</span>
+                        <span className="text-xl font-normal">contact us</span>
                         <img src="/enemy.sh.icon.svg" alt="enemy.sh" className="h-10" />
                     </div>
                     <div className="flex flex-row gap-5">
@@ -104,9 +104,9 @@ export default function CtaSection() {
                         name="first_name"
                         render={({ field }) => (
                             <FormItem className="w-1/2">
-                            <FormLabel>First name</FormLabel>
+                            <FormLabel>first name</FormLabel>
                             <FormControl>
-                                <Input placeholder="Enter your first name" {...field} className="rounded-none" />
+                                <Input placeholder="enter your first name" {...field} className="rounded-none" />
                             </FormControl>
                             <FormMessage />
                             </FormItem>
@@ -117,9 +117,9 @@ export default function CtaSection() {
                         name="last_name"
                         render={({ field }) => (
                             <FormItem className="w-1/2">
-                            <FormLabel>Last name</FormLabel>
+                            <FormLabel>last name</FormLabel>
                             <FormControl>
-                                <Input placeholder="Enter your last name" {...field} className="rounded-none" />
+                                <Input placeholder="enter your last name" {...field} className="rounded-none" />
                             </FormControl>
                             <FormMessage />
                             </FormItem>
@@ -131,10 +131,10 @@ export default function CtaSection() {
                         name="email"
                         render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Email</FormLabel>
+                            <FormLabel>email</FormLabel>
                             <FormControl>
                             <Input
-                                placeholder="Enter your email address"
+                                placeholder="enter your email address"
                                 {...field}
                                 className="rounded-none"
                             />
@@ -148,7 +148,7 @@ export default function CtaSection() {
                         name="message"
                         render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Message</FormLabel>
+                            <FormLabel>message</FormLabel>
                             <FormControl>
                             <Textarea
                                 placeholder="Tell us about your project or ask us a question."
@@ -166,7 +166,7 @@ export default function CtaSection() {
                         className="bg-black hover:bg-gray-700 rounded-none"
                         type="submit"
                         >
-                        Submit
+                        submit
                         </Button>
                     </div>
                     </form>
