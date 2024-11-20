@@ -8,70 +8,67 @@ import "slick-carousel/slick/slick-theme.css";
 import { set } from 'react-hook-form';
 import { div, p, s } from 'motion/react-client';
 import { dir } from 'console';
-
+const baseSettings = {
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 0,
+    cssEase: 'linear',
+    pauseOnHover: false,
+    arrows: false,
+    centerMode: false,
+    variableWidth: true,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        }
+    ]
+};
 
 const settings = {
-    dots: false,
-    infinite: true,
+    ...baseSettings,
     speed: 4000,
-    slidesToShow: 7,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 0,
-    cssEase: 'linear',
-    pauseOnHover: false,
-    arrows: false,
-    centerMode: false,
-    variableWidth: true,
-}
+    slidesToShow: 5,
+};
 
 const settings2 = {
-    dots: false,
-    infinite: true,
+    ...baseSettings,
     speed: 3500,
-    slidesToShow: 7,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 0,
-    cssEase: 'linear',
-    pauseOnHover: false,
-    arrows: false,
-    centerMode: false,
-    variableWidth: true,
+    slidesToShow: 5,
     rtl: true,
-}
+};
 
 const settings3 = {
-    dots: false,
-    infinite: true,
-    speed: 5000,
-    slidesToShow: 7,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 0,
-    cssEase: 'linear',
-    pauseOnHover: false,
-    arrows: false,
-    centerMode: false,
-    variableWidth: true,
+    ...baseSettings,
+    speed: 4500,
+    slidesToShow: 5,
     rtl: true,
-}
+};
 
 const settings4 = {
-    dots: false,
-    infinite: true,
+    ...baseSettings,
     speed: 3700,
-    slidesToShow: 7,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 0,
-    cssEase: 'linear',
-    pauseOnHover: false,
-    arrows: false,
-    centerMode: false,
-    variableWidth: true,
-    rtl: false,
-}
+    slidesToShow: 5,
+};
+
 
 const painPointsOne = [
     "integration issues", 
@@ -197,8 +194,8 @@ function InfoSection() {
                 <div className="inset-y-0 right-0 w-24 bg-gradient-to-l from-slate-50 to-transparent pointer-events-none z-10 absolute"></div>
             </div>
             <div className="flex flex-row items-center justify-center w-5/6 h-1/2">
-                <div className="flex flex-col items-center justify-center w-1/2 gap-2"> 
-                    <p className="text-sm text-gray-700">(your enemies are our enemies too.)</p>
+                <div className="flex flex-col items-center justify-center w-full gap-2"> 
+                    <p className="text-xs text-black opacity-70">(your enemies are our enemies)</p>
                 </div>
             </div>
         </div>

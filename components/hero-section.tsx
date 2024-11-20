@@ -32,21 +32,15 @@ export function HeroSection() {
       {
         breakpoint: 1024,
         settings: {
+          slidesToShow: 5,
+        }
+      },
+      {
+        breakpoint: 700,
+        settings: {
           slidesToShow: 3,
         }
       },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-        }
-      }
     ]
   }
 
@@ -68,8 +62,8 @@ export function HeroSection() {
 
   return (
     <section className="h-screen flex flex-col items-center bg-slate-50 justify-center bg-dots bg-top text-black">
-      <div className="text-center px-4 z-10 mb-48 mt-48">
-        <h1 className="hero-title text-5xl md:text-5xl font-light mb-4 opacity-0">
+      <div className="text-center px-4 z-10 mb-48 mt-52">
+        <h1 className="hero-title text-3xl md:text-5xl font-light mb-4 opacity-0">
           <span className='text-red-600'>$ {' '}</span>
             <Typewriter
               words={['deploy your enemy']}
@@ -79,7 +73,7 @@ export function HeroSection() {
               delaySpeed={1000}
             />
         </h1>                                    
-        <p className="hero-description text-gray-800 text-md md:text-sm mb-8 opacity-0">
+        <p className="hero-description text-gray-800 text-sm md:text-md mb-8 opacity-0">
           <Typewriter
             words={[
               "turning challenges into allies",
