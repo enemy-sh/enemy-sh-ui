@@ -93,17 +93,17 @@ export default function CtaSection() {
             <div ref={sectionRef} className="flex flex-row-reverse items-start justify-center w-5/6 h-1/2 mb-8">
                 <div className="flex items-center justify-center w-5/6">
                 <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5 bg-white rounded-none font-normal p-6 shadow-lg">
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5 bg-white rounded-none font-normal p-6 shadow-lg md:w-fit w-full">
                     <div className="flex flex-row items-center justify-between">
                         <span className="text-xl font-normal">contact us</span>
                         <img src="/enemy.sh.icon.svg" alt="enemy.sh" className="h-10" />
                     </div>
-                    <div className="flex flex-row gap-5">
+                    <div className="flex flex-col md:flex-row gap-5">
                         <FormField
                         control={form.control}
                         name="first_name"
                         render={({ field }) => (
-                            <FormItem className="w-1/2">
+                            <FormItem className="w-full md:w-1/2">
                             <FormLabel>first name</FormLabel>
                             <FormControl>
                                 <Input placeholder="enter your first name" {...field} className="rounded-none" />
@@ -116,7 +116,7 @@ export default function CtaSection() {
                         control={form.control}
                         name="last_name"
                         render={({ field }) => (
-                            <FormItem className="w-1/2">
+                            <FormItem className="w-full md:w-1/2">
                             <FormLabel>last name</FormLabel>
                             <FormControl>
                                 <Input placeholder="enter your last name" {...field} className="rounded-none" />
