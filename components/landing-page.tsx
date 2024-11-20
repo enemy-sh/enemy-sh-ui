@@ -11,8 +11,8 @@ export function LandingPageComponent() {
       <main>
         <Nav />
         <HeroSection />
-        <InfoSection />
         <ServicesSection />
+        <InfoSection />
         <CtaSection />
         <Footer />
       </main>

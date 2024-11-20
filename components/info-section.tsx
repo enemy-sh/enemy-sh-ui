@@ -125,7 +125,7 @@ const painPointsFour = [
     "deployment failures"
 ];
 
-const painPointsStyles = "bg-slate-50 p-1 rounded-full px-2 border text-sm text-center border-slate-200 drop-shadow-sm hover:bg-red-500 hover:text-white transition-all duration-300 hover:border-none hover:cursor-pointer ease-in-out";
+const painPointsStyles = "bg-slate-50 p-1 rounded-full px-3 border text-sm text-center border-slate-200 drop-shadow-sm hover:bg-red-500 hover:text-white transition-all duration-300 hover:border-none hover:cursor-pointer ease-in-out";
 
 function InfoSection() {
     const sectionRef = useRef(null);
@@ -135,11 +135,11 @@ function InfoSection() {
             const observer = new IntersectionObserver(
                 ([entry]) => {
                     if (entry.isIntersecting) {
-                        animate(sectionNode, { x: [100, 0], opacity: [0, 1] }, { duration: 1, delay: 0.5 });
+                        animate(sectionNode, { x: [100, 0], opacity: [0, 1] }, { duration: 1 });
                         observer.disconnect(); 
                     }
                 },
-                { threshold: 0.1 }
+                { threshold: 0.6 }
             );
             observer.observe(sectionNode);
             return () => observer.disconnect();
@@ -147,8 +147,8 @@ function InfoSection() {
     }, []);
   return (
     <div className="bg-slate-50 bg-dots bg-bottom min-h-[30vh] flex flex-col justify-center" >
-        <div ref={sectionRef} className="flex flex-col items-center justify-center w-full">
-            <div className="w-5/6 flex gap-1 flex-col mb-4">
+        <div ref={sectionRef} className="flex flex-col items-center justify-center w-full opacity-0">
+            <div className="w-full flex gap-1 flex-col mb-4 relative">
                 <Slider {...settings2}>
                 {painPointsOne && painPointsOne.map((painPoint, index) => (
                 <div key={index}>
@@ -193,6 +193,8 @@ function InfoSection() {
                 </div>
                 ))}
                 </Slider>
+                <div className="inset-y-0 left-0 w-24 bg-gradient-to-r from-slate-50 to-transparent pointer-events-none z-10 absolute"></div>
+                <div className="inset-y-0 right-0 w-24 bg-gradient-to-l from-slate-50 to-transparent pointer-events-none z-10 absolute"></div>
             </div>
             <div className="flex flex-row items-center justify-center w-5/6 h-1/2">
                 <div className="flex flex-col items-center justify-center w-1/2 gap-2"> 

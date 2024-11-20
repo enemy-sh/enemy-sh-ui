@@ -67,12 +67,12 @@ export function HeroSection() {
 
   return (
     <section className="h-screen flex flex-col items-center bg-slate-50 justify-center bg-dots bg-top text-black">
-      <div className="text-center px-4 z-10 mb-60 mt-60">
-        <h1 className="hero-title text-5xl md:text-6xl font-light mb-4">
+      <div className="text-center px-4 z-10 mb-48 mt-48">
+        <h1 className="hero-title text-5xl md:text-5xl font-light mb-4">
           deploy your {' '}
           <span className='text-red-600'>enemy</span>
         </h1>
-        <p className="hero-description text-gray-800 text-md md:text-md mb-8">
+        <p className="hero-description text-gray-800 text-md md:text-sm mb-8">
           <Typewriter
             words={[
               "turning challenges into allies",

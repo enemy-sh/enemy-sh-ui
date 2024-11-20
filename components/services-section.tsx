@@ -31,7 +31,7 @@ export default function ServicesSection() {
                         observer.disconnect();
                     }
                 },
-                { threshold: 0.1 }
+                { threshold: 0.7 }
             );
             observer.observe(sectionNode);
             return () => observer.disconnect();
@@ -39,10 +39,10 @@ export default function ServicesSection() {
     }, []);
     return (
         <div className="bg-slate-50 bg-dots bg-top" >
-            <div ref={sectionRef} className="flex flex-col items-center justify-center min-h-[70vh]">
+            <div ref={sectionRef} className="flex flex-col items-center justify-center min-h-[70vh] opacity-0">
                 <div className="flex flex-row items-start start w-5/6 h-1/2 mb-8">
                 <div className="flex flex-col items-start justify-center w-1/2 gap-2">
-                    <p className="text-5xl">we will focus on everything else so you can focus on whats important.</p>
+                    <p className="text-4xl">we will focus on everything else so you can focus on whats important.</p>
                     <p className="text-gray-700">our wide range of services allows you to focus on your core business while we handle the rest.</p>
                 </div>
                 </div>
