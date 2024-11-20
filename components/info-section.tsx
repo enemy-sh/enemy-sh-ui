@@ -194,7 +194,7 @@ function InfoSection() {
                 <div className="inset-y-0 right-0 w-24 bg-gradient-to-l from-slate-50 to-transparent pointer-events-none z-10 absolute"></div>
             </div>
             <div className="flex flex-row items-center justify-center w-5/6 h-1/2">
-                <div className="flex flex-col items-center justify-center w-1/2 gap-2"> 
+                <div className="flex flex-col items-center justify-center w-full gap-2"> 
                     <p className="text-sm text-gray-700">(your enemies are our enemies too.)</p>
                 </div>
             </div>
