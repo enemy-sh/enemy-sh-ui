@@ -64,25 +64,29 @@ export function HeroSection() {
     { name: "Pulumi", logo: "pulumi.png" },
     { name: "Helm", logo: "helm.svg" },
   ]
+  
 
   return (
     <section className="h-screen flex flex-col items-center bg-slate-50 justify-center bg-dots bg-top text-black">
       <div className="text-center px-4 z-10 mb-48 mt-48">
         <h1 className="hero-title text-5xl md:text-5xl font-light mb-4">
-          deploy your {' '}
-          <span className='text-red-600'>enemy</span>
-        </h1>
+            <Typewriter
+              words={['deploy your enemy']}
+              cursor
+              cursorStyle="_"
+              typeSpeed={100}
+              delaySpeed={1000}
+            />
+        </h1>                                    
         <p className="hero-description text-gray-800 text-md md:text-sm mb-8">
           <Typewriter
             words={[
               "turning challenges into allies",
             ]}
-            cursor
             cursorStyle="_"
             typeSpeed={100}
             deleteSpeed={50}
             delaySpeed={1000}
-            loop
           />
         </p>
         <Link href="#services">
