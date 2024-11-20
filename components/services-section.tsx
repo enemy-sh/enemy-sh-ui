@@ -42,8 +42,8 @@ export default function ServicesSection() {
             <div ref={sectionRef} className="flex flex-col items-center justify-center min-h-[70vh] opacity-0">
                 <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start w-full md:w-5/6 h-1/2 mb-8 px-4 md:px-0">
                     <div className="flex flex-col items-center md:items-start justify-center w-full md:w-1/2 gap-2 text-left">
-                        <p className="text-4xl">we will focus on everything else so you can focus on whats important.</p>
-                        <p className="text-gray-700">our wide range of services allows you to focus on your core business while we handle the rest.</p>
+                        <p className="sm:text-4xl text-2xl">we will focus on everything else so you can focus on whats important.</p>
+                        <p className="text-gray-700 sm:text-md text-sm">our wide range of services allows you to focus on your core business while we handle the rest.</p>
                     </div>
                 </div>
                 <div className="flex flex-row items-start justify-center w-full md:w-5/6">
