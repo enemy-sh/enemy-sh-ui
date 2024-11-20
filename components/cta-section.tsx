@@ -90,7 +90,7 @@ export default function CtaSection() {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-slate-50 bg-dots bg-bottom" >
-            <div ref={sectionRef} className="flex flex-row-reverse items-start justify-center w-5/6 h-1/2 mb-8">
+            <div ref={sectionRef} className="flex flex-row-reverse items-start justify-center w-full sm:w-5/6 h-1/2 mb-8">
                 <div className="flex items-center justify-center w-5/6">
                 <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5 bg-white rounded-none font-normal p-6 shadow-lg md:w-fit w-full">
