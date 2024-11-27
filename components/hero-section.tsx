@@ -59,6 +59,12 @@ export function HeroSection() {
     { name: "Helm", logo: "helm.svg" },
   ]
   
+  const handleScrollToServices = () => {
+    const servicesSection = document.getElementById('services')
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' }) // Smooth scrolling
+    }
+  }
 
   return (
     <section className="h-screen flex flex-col items-center bg-slate-50 justify-center bg-dots bg-top text-black">
@@ -84,11 +90,9 @@ export function HeroSection() {
             delaySpeed={1000}
           />
         </p>
-        <Link href="#services">
-          <div className="hero-button inline-flex items-center bg-black px-4 py-2 font-normal hover:bg-gray-700 transition-all duration-300 text-white opacity-0">
+          <div onClick={handleScrollToServices} className="hero-button inline-flex items-center bg-black px-4 py-2 font-normal hover:bg-gray-700 transition-all duration-300 text-white opacity-0 hover:cursor-pointer">
             get started
           </div>
-        </Link>
       </div>
       <div className="w-full relative hero-description opacity-0">
         <Slider {...settings}>

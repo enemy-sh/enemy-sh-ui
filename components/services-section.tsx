@@ -38,7 +38,7 @@ export default function ServicesSection() {
         }
     }, []);
     return (
-        <div className="bg-slate-50 bg-dots bg-top" >
+        <section id="services" className="bg-slate-50 bg-dots bg-top px-5" >
             <div ref={sectionRef} className="flex flex-col items-center justify-center min-h-[70vh] opacity-0">
                 <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start w-full md:w-5/6 h-1/2 mb-8 px-4 md:px-0">
                     <div className="flex flex-col items-center md:items-start justify-center w-full md:w-1/2 gap-2 text-left">
@@ -50,6 +50,6 @@ export default function ServicesSection() {
                     <ServicesCarousel services={services} />
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

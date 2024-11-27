@@ -47,6 +47,14 @@ const settings = {
   ]
 }
 
+const handleScrollToContact = () => {
+  const servicesSection = document.getElementById('contact')
+  if (servicesSection) {
+    servicesSection.scrollIntoView({ behavior: 'smooth' }) // Smooth scrolling
+  }
+}
+
+
 export default function ServicesCarousel({ services }: ServicesCarouselProps) {
   return (
     <div className="w-full h-fit p-2 justify-center flex flex-col">
@@ -61,7 +69,7 @@ export default function ServicesCarousel({ services }: ServicesCarouselProps) {
           <p className="text-gray-700 text-sm">{service.description}</p>
           </div>
           <div className="flex flex-row items-center justify-start w-full gap-2">
-          <Button variant={'ghost'}>learn more</Button>
+          <Button variant={'ghost'} onClick={handleScrollToContact}>learn more</Button>
           </div>
           <div className="flex flex-row items-center justify-start w-full gap-2 flex-wrap">
           {service.categories.map((category, index) => (
