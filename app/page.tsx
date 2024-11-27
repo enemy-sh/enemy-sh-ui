@@ -1,9 +1,29 @@
+"use client";
+
+import { SessionProvider } from 'next-auth/react';
 import { LandingPageComponent } from '../components/landing-page'
+import { useEffect } from 'react'
+import { getSession, signIn } from 'next-auth/react'
+import { Toaster } from 'react-hot-toast'
 
 export default function Page() {
+  
+  useEffect(() => {
+    const ensureToken = async () => {
+      const session = await getSession()
+      if (!session) {
+        await signIn("credentials", {
+          redirect: false,
+        })
+      }
+    }
+    ensureToken();
+  }, [])
+
   return (
-    <div>
-      <LandingPageComponent />
-    </div>
+    <SessionProvider>
+        <Toaster />
+        <LandingPageComponent />
+    </SessionProvider>
   )
 }

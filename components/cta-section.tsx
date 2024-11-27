@@ -1,37 +1,35 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { animate } from "motion";
 import { Button } from '@/components/ui/button';
-
+import { useSession } from "next-auth/react";
+import { toast } from "react-hot-toast";
 
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
 
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
-
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
+import { Loader2 } from "lucide-react";
 
 
 
 export default function CtaSection() {
+    const [loading, setLoading] = useState(false);
+    const [submitted, setSubmitted] = useState(false);
+    const { data: session } = useSession();
+    const contactApiEndpoint = process.env.NEXT_PUBLIC_CONTACT_API_ENDPOINT;
+
     const formSchema = z.object({
       first_name: z.string().min(1, {
         message: 'First name must be at least 2 characters.',
@@ -61,14 +59,50 @@ export default function CtaSection() {
       },
     });
   
-    // 2. Define a submit handler.
     function onSubmit(values: z.infer<typeof formSchema>) {
-      // Do something with the form values.
-      // ✅ This will be type-safe and validated.
-      console.log(values);
+        if (submitted) {
+            toast.error('You have already submitted this form');
+            return;
+        }
+
+        if (session && contactApiEndpoint) {
+            const loadingToast = toast.loading('Sending message...');
+            setLoading(true);
+            fetch(contactApiEndpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + session.accessToken,
+                },
+                body: JSON.stringify({
+                    name: values.first_name + ' ' + values.last_name,
+                    email: values.email,
+                    message: values.message,
+                }),
+            })
+            .then(async response => {
+                if (!response.ok) {
+                    const err = await response.json();
+                    throw new Error(err.message || `HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+                toast.dismiss(loadingToast);
+                toast.success('Thank you for your message');
+                setLoading(false);
+                setSubmitted(true);
+            })
+            .catch(error => {
+                console.error(error);
+                toast.dismiss(loadingToast);
+                toast.error(`${error.message}`);
+                setLoading(false);
+            });
+        }
     }
-  
-  
+
     const sectionRef = useRef(null);
 
     useEffect(() => {
@@ -163,10 +197,11 @@ export default function CtaSection() {
 
                     <div className="w-full flex flex-row">
                         <Button
-                        className="bg-black hover:bg-gray-700 rounded-none"
+                        className="bg-black hover:bg-gray-700 rounded-none transition-all duration-200"
                         type="submit"
+                        disabled={loading}
                         >
-                        submit
+                        {loading ? <><Loader2 className="h-4 w-4 animate-spin" /> submit</> : "submit"}
                         </Button>
                     </div>
                     </form>
