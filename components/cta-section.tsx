@@ -88,14 +88,12 @@ export default function CtaSection() {
                 return response.json();
             })
             .then(data => {
-                console.log(data);
                 toast.dismiss(loadingToast);
                 toast.success('Thank you for your message');
                 setLoading(false);
                 setSubmitted(true);
             })
             .catch(error => {
-                console.error(error);
                 toast.dismiss(loadingToast);
                 toast.error(`${error.message}`);
                 setLoading(false);
