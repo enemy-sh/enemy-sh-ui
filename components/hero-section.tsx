@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect } from 'react'
-import Link from 'next/link'
 import Slider from 'react-slick';
 import { Typewriter } from 'react-simple-typewriter'
 import { animate } from 'motion'
