@@ -87,7 +87,7 @@ export default function CtaSection() {
                 }
                 return response.json();
             })
-            .then(data => {
+            .then(() => {
                 toast.dismiss(loadingToast);
                 toast.success('Thank you for your message');
                 setLoading(false);

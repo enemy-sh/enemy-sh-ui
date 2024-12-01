@@ -5,9 +5,7 @@ import { animate } from "motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { set } from 'react-hook-form';
-import { div, p, s } from 'motion/react-client';
-import { dir } from 'console';
+
 const baseSettings = {
     dots: false,
     infinite: true,
