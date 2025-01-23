@@ -12,7 +12,7 @@ RUN npm i sharp
 
 COPY . .
 
-ENV NEXT_PUBLIC_CONTACT_API_ENDPOINT=https://api.enemy.sh/contact/
+ENV NEXT_PUBLIC_CONTACT_API_ENDPOINT=https://api.enemy.sh/api/contact/
 
 RUN npm run build
 
