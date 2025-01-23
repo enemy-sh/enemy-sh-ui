@@ -40,6 +40,11 @@ variable "registry_username" {
   sensitive   = true
 }
 
+variable "container_app_environment_static_ip_address" {
+  type        = string
+  description = "The environment static IP address"
+}
+
 // variables not driven by pipeline
 variable "cpu" {
   type        = string
@@ -64,4 +69,14 @@ variable "min_replicas" {
 variable "registry_server" {
   type        = string
   description = "The registry server"
+}
+
+variable "dns_zone_name" {
+  type        = string
+  description = "The DNS zone name"
+}
+
+variable "dns_zone_resource_group_name" {
+  type        = string
+  description = "The DNS zone resource group name"
 }
