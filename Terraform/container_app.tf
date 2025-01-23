@@ -10,7 +10,6 @@ resource "azurerm_container_app" "container_app" {
   }
   
   ingress {
-    exposed_port = 80
     target_port = 3000
     external_enabled = true
     
