@@ -41,11 +41,6 @@ resource "azurerm_container_app" "container_app" {
         value = var.auth_url
       }
 
-      env {
-        name  = "NEXT_PUBLIC_CONTACT_API_ENDPOINT"
-        value = var.next_auth_public_contact_api_endpoint
-      }
-
       name   = "${local.container_app_name}-cont"
       image  = local.container_app_image
       memory = var.memory

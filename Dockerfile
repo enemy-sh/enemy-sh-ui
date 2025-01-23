@@ -12,6 +12,8 @@ RUN npm i sharp
 
 COPY . .
 
+ENV NEXT_PUBLIC_CONTACT_API_ENDPOINT=https://api.enemy.sh/contact/
+
 RUN npm run build
 
 FROM node:alpine3.20 AS serve

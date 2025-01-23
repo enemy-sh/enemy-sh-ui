@@ -87,11 +87,6 @@ variable "dns_zone_resource_group_name" {
   description = "The DNS zone resource group name"
 }
 
-variable "next_auth_public_contact_api_endpoint" {
-  type        = string
-  description = "The next auth public contact api endpoint"
-}
-
 variable "auth_url" {
   type        = string
   description = "The auth url"
