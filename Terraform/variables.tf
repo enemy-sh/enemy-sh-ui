@@ -45,6 +45,12 @@ variable "container_app_environment_static_ip_address" {
   description = "The environment static IP address"
 }
 
+variable "auth_secret" {
+  type        = string
+  description = "The auth secret"
+  sensitive   = true
+}
+
 // variables not driven by pipeline
 variable "cpu" {
   type        = string
@@ -79,4 +85,14 @@ variable "dns_zone_name" {
 variable "dns_zone_resource_group_name" {
   type        = string
   description = "The DNS zone resource group name"
+}
+
+variable "next_auth_public_contact_api_endpoint" {
+  type        = string
+  description = "The next auth public contact api endpoint"
+}
+
+variable "auth_url" {
+  type        = string
+  description = "The auth url"
 }

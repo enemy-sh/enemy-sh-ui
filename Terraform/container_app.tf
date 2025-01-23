@@ -9,6 +9,11 @@ resource "azurerm_container_app" "container_app" {
     value = var.github_token
   }
 
+  secret {
+    name  = "auth-secret"
+    value = var.auth_secret
+  }
+
   ingress {
     target_port      = 3000
     external_enabled = true
@@ -24,7 +29,23 @@ resource "azurerm_container_app" "container_app" {
     min_replicas    = var.min_replicas
     revision_suffix = local.container_app_revision_suffix
 
+
     container {
+      env {
+        name        = "AUTH_SECRET"
+        secret_name = "auth-secret"
+      }
+
+      env {
+        name  = "AUTH_URL"
+        value = var.auth_url
+      }
+
+      env {
+        name  = "NEXT_PUBLIC_CONTACT_API_ENDPOINT"
+        value = var.next_auth_public_contact_api_endpoint
+      }
+
       name   = "${local.container_app_name}-cont"
       image  = local.container_app_image
       memory = var.memory
