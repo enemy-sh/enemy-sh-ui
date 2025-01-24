@@ -11,7 +11,9 @@ export default function Page() {
   useEffect(() => {
     const ensureToken = async () => {
       const session = await getSession()
-      if (!session) {
+      const isExpired = session?.expires ? new Date(session.expires) <= new Date() : true
+      
+      if (!session || isExpired) {
         await signIn("credentials", {
           redirect: false,
         })
