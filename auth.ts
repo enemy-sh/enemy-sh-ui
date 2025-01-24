@@ -38,7 +38,7 @@ export const { handlers, signIn, signOut, auth} = NextAuth({
     secret: process.env.AUTH_SECRET,
     callbacks: {
         jwt: async({ token, user }) => {
-            const isExpired = token.accessToken
+            const isExpired = token.accessToken && typeof token.accessToken === "string"
             ? (() => {
                 const decoded = jwt.decode(token.accessToken as string);
                 return decoded?.exp ? new Date(decoded.exp * 1000) < new Date() : true;
