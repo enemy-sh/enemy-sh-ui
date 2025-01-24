@@ -39,16 +39,20 @@ export const { handlers, signIn, signOut, auth} = NextAuth({
     callbacks: {
         jwt: async({ token, user }) => {
             const isExpired = token.accessToken && typeof token.accessToken === "string"
-            ? (() => {
-                const decoded = jwt.decode(token.accessToken as string);
-                return decoded?.exp ? new Date(decoded.exp * 1000) < new Date() : true;
-            })()
-            : true;
+             ? (() => {
+                 const decoded = jwt.decode(token.accessToken as string);
+                     if (typeof decoded === "object" && decoded !== null && "exp" in decoded) {
+                     return new Date((decoded.exp as number) * 1000) < new Date();
+                     }
+                     return true;
+             })()
+             : true;
+
             if (user || isExpired) {
                 const payload = {
-                    id: user.id,
-                    name: user.name,
-                    email: user.email,
+                    id: user?.id || token.id,
+                    name: user?.name || token.name,
+                    email: user?.email || token.email,
                 }
                 token.accessToken = jwt.sign(
                     payload,
