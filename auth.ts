@@ -38,7 +38,13 @@ export const { handlers, signIn, signOut, auth} = NextAuth({
     secret: process.env.AUTH_SECRET,
     callbacks: {
         jwt: async({ token, user }) => {
-            if (user) {
+            const isExpired = token.accessToken
+            ? (() => {
+                const decoded = jwt.decode(token.accessToken);
+                return decoded?.exp ? new Date(decoded.exp * 1000) < new Date() : true;
+            })()
+            : true;
+            if (user || isExpired) {
                 const payload = {
                     id: user.id,
                     name: user.name,
