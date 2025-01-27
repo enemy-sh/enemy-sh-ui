@@ -8,7 +8,7 @@ export default function Footer() {
               <div className="flex flex-row items-center gap-2">
                   <img src="/enemy.sh.icon.svg" alt="enemy.sh" className="h-10" />
                   <div className="flex flex-col">
-                    <span className="text-gray-700">© 2024 enemy.sh</span>
+                    <span className="text-gray-700">© 2025 enemy.sh</span>
                     <span className="text-gray-700">all rights reserved.</span>
                   </div>
               </div>
