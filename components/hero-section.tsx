@@ -22,7 +22,7 @@ export function HeroSection() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0,
-    cssEase: 'linear',
+    cssEase: 'ease',
     pauseOnHover: false,
     arrows: false,
     centerMode: false,
@@ -98,7 +98,7 @@ export function HeroSection() {
           {devOpsPlatforms.map((platform, index) => (
             <div key={index} className="px-2 ">
               <div className="flex items-center justify-center h-22 p-4 rounded-lg ">
-                <img src={platform.logo} alt={platform.name} className="w-full h-10 object-contain" />
+                <img src={platform.logo} alt={platform.name} className="w-32 h-10 object-contain" />
               </div>
             </div>
           ))}
