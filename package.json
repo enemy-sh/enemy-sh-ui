@@ -19,7 +19,7 @@
     "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.460.0",
     "motion": "^11.11.17",
-    "next": "15.2.3",
+    "next": "15.2.4",
     "next-auth": "^5.0.0-beta.25",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
