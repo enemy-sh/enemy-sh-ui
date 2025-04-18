@@ -66,32 +66,17 @@ export function HeroSection() {
   }
 
   return (
-    <section className="h-screen flex flex-col items-center bg-slate-50 justify-center bg-dots bg-top text-black">
-      <div className="text-center px-4 z-10 mb-48 mt-52">
-        <h1 className="hero-title text-2xl md:text-5xl font-light mb-4 opacity-0">
-          <span className='text-red-600'>$ {' '}</span>
-            <Typewriter
-              words={['deploy your enemy']}
-              cursor
-              cursorStyle="_"
-              typeSpeed={100}
-              delaySpeed={1000}
-            />
-        </h1>                                    
-        <p className="hero-description text-gray-800 text-sm md:text-md mb-8 opacity-0">
-          <Typewriter
-            words={[
-              "turning challenges into allies",
-            ]}
-            cursorStyle="_"
-            typeSpeed={100}
-            deleteSpeed={50}
-            delaySpeed={1000}
-          />
-        </p>
-          <div onClick={handleScrollToServices} className="hero-button inline-flex items-center bg-black px-4 py-2 font-normal hover:bg-gray-700 transition-all duration-300 text-white opacity-0 hover:cursor-pointer">
-            get started
+    <section className="h-screen flex bg-slate-50 flex-col w-full bg-dots justify-center items-center bg-top text-black">
+      <div className="w-full max-w-4xl flex flex-row justify-between items-center">
+        <div className="text-center flex flex-col items-start gap-4">
+            <h1 className="hero-title text-2xl md:text-5xl font-semibold opacity-0">
+	       Deploy
+            </h1>                                    
+            <div onClick={handleScrollToServices} className="hero-button w-fit inline-flex items-center bg-black px-4 py-2 font-normal hover:bg-gray-700 transition-all duration-300 text-white opacity-0 hover:cursor-pointer">
+              get started
+            </div>
           </div>
+	<img className="w-3/4 h-auto" src='hero-graphic.svg' alt='enemy.sh hero graphic'/>
       </div>
       <div className="w-full relative hero-description opacity-0">
         <Slider {...settings}>
@@ -108,6 +93,7 @@ export function HeroSection() {
         {/* Right gradient overlay */}
         <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-slate-50 to-transparent pointer-events-none"></div>
       </div>
+      
     </section>
   )
 }
