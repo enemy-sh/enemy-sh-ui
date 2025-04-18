@@ -29,10 +29,10 @@ export default function Nav() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="flex justify-center items-center p-4 px-5 sm:px-4 text-black absolute w-full top-0 z-50">
-            <div className="flex items-center gap-4 sm:w-5/6 w-full justify-between">
+        <div className="flex justify-center items-center p-4 sm:px-4 text-black bg-slate-50 border-b bg-opacity-80 backdrop-blur-md fixed w-full top-0 z-50">
+            <div className="flex items-center gap-4 sm:w-5/6 w-full max-w-4xl justify-between">
                 <div className="text-3xl font-normal">
-                    <img src="/enemy.sh.svg" alt="enemy.sh" className="h-9" />
+                    <img src="/enemy.svg" alt="enemy.sh" className="h-7 w-auto" />
                 </div>
                 <div className="hidden md:flex gap-5">
                     <p onClick={handleScrollToServices} className="hover:cursor-pointer">services</p>

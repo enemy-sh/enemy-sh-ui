@@ -128,7 +128,7 @@ export default function CtaSection() {
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5 bg-white rounded-none font-normal p-6 shadow-lg md:w-fit w-full">
                     <div className="flex flex-row items-center justify-between">
                         <span className="text-xl font-normal">contact us</span>
-                        <img src="/enemy.sh.icon.svg" alt="enemy.sh" className="h-10" />
+                        <img src="/enemy.svg" alt="enemy.sh" className="h-6" />
                     </div>
                     <div className="flex flex-col md:flex-row gap-5">
                         <FormField

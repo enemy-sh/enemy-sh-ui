@@ -9,7 +9,6 @@ export function LandingPageComponent() {
   return (
     <div className="min-h-screen text-black">
       <main>
-        <Nav />
         <HeroSection />
         <ServicesSection />
         <InfoSection />

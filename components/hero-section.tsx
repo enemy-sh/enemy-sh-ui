@@ -22,7 +22,7 @@ export function HeroSection() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0,
-    cssEase: 'ease',
+    cssEase: 'linear',
     pauseOnHover: false,
     arrows: false,
     centerMode: false,
@@ -68,7 +68,7 @@ export function HeroSection() {
   return (
     <section className="h-screen flex flex-col items-center bg-slate-50 justify-center bg-dots bg-top text-black">
       <div className="text-center px-4 z-10 mb-48 mt-52">
-        <h1 className="hero-title text-3xl md:text-5xl font-light mb-4 opacity-0">
+        <h1 className="hero-title text-2xl md:text-5xl font-light mb-4 opacity-0">
           <span className='text-red-600'>$ {' '}</span>
             <Typewriter
               words={['deploy your enemy']}

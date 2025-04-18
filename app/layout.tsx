@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Funnel_Sans } from "next/font/google";
 import "./globals.css";
+import Nav from "@/components/nav";
 
 const funnelSans = Funnel_Sans({
   subsets: ['latin'],
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body
         className={`${funnelSans.className} antialiased`}
       >
+        <Nav />
         {children}
       </body>
     </html>
