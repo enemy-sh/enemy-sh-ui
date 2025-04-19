@@ -2,11 +2,8 @@
 
 import React from "react";
 import{ useState } from "react";
-
-
 import { Menu } from "lucide-react";
-
-
+import { GitHubLogoIcon } from "@radix-ui/react-icons"
 
 const handleScrollToServices = () => {
     const servicesSection = document.getElementById('services')
@@ -29,15 +26,17 @@ export default function Nav() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="flex justify-center items-center p-4 sm:px-4 text-black bg-slate-50 border-b bg-opacity-80 backdrop-blur-md fixed w-full top-0 z-50">
-            <div className="flex items-center gap-4 sm:w-5/6 w-full max-w-4xl justify-between">
+        <div className="flex justify-center items-center p-4 sm:px-4 text-sm font-medium bg-slate-50 border-b bg-opacity-80 backdrop-blur-md fixed w-full top-0 z-50">
+            <div className="flex items-center gap-4 sm:w-5/6 w-full max-w-7xl justify-between">
                 <div className="text-3xl font-normal">
                     <img src="/enemy.svg" alt="enemy.sh" className="h-7 w-auto" />
                 </div>
-                <div className="hidden md:flex gap-5">
+                <div className="hidden md:flex gap-3 items-center">
                     <p onClick={handleScrollToServices} className="hover:cursor-pointer">services</p>
-                    <p onClick={() => window.open("https://github.com/enemy-sh", "_blank")} className="hover:cursor-pointer">github</p>
                     <p onClick={handleScrollToContact} className="hover:cursor-pointer">contact</p>
+                    <p onClick={() => window.open("https://github.com/enemy-sh", "_blank")} className="hover:cursor-pointer">
+			<GitHubLogoIcon />
+		    </p>
                 </div>
                 <div className="md:hidden">
                     <div className="relative">

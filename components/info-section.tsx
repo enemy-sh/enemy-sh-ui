@@ -67,7 +67,6 @@ const settings4 = {
     slidesToShow: 5,
 };
 
-
 const painPointsOne = [
     "integration issues", 
     "deployment delays", 
@@ -120,7 +119,7 @@ const painPointsFour = [
     "deployment failures"
 ];
 
-const painPointsStyles = "bg-slate-50 p-1 rounded-full px-3 border text-sm text-center border-slate-200 drop-shadow-sm hover:bg-red-500 hover:text-white transition-all duration-300 hover:border-none hover:cursor-pointer ease-in-out";
+const painPointsStyles = "bg-slate-50 px-1 rounded-sm text-sm text-center font-medium opacity-30";
 
 function InfoSection() {
     const sectionRef = useRef(null);
@@ -141,8 +140,8 @@ function InfoSection() {
         }
     }, []);
   return (
-    <div className="bg-slate-50 bg-dots bg-bottom min-h-[30vh] flex flex-col justify-center" >
-        <div ref={sectionRef} className="flex flex-col items-center justify-center w-full opacity-0">
+    <div className="items-center flex flex-col justify-center" >
+        <div ref={sectionRef} className="flex flex-col items-center justify-center w-full max-w-7xl opacity-0">
             <div className="w-full flex gap-1 flex-col mb-4 relative">
                 <Slider {...settings2}>
                 {painPointsOne && painPointsOne.map((painPoint, index) => (
@@ -193,7 +192,7 @@ function InfoSection() {
             </div>
             <div className="flex flex-row items-center justify-center w-5/6 h-1/2">
                 <div className="flex flex-col items-center justify-center w-full gap-2"> 
-                    <p className="text-xs text-black opacity-70">(your enemies are our enemies)</p>
+                    <p className="text-xs text-black opacity-30">(your enemies are our enemies)</p>
                 </div>
             </div>
         </div>

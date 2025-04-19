@@ -24,7 +24,7 @@ import { Loader2 } from "lucide-react";
 
 
 
-export default function CtaSection() {
+export default function ContactForm() {
     const [loading, setLoading] = useState(false);
     const [submitted, setSubmitted] = useState(false);
     const { data: session } = useSession();
@@ -121,11 +121,8 @@ export default function CtaSection() {
     }, []);
 
     return (
-        <section id="contact" className="flex flex-col items-center justify-center min-h-screen bg-slate-50 bg-dots bg-bottom" >
-            <div ref={sectionRef} className="flex flex-row-reverse items-start justify-center w-full sm:w-5/6 h-1/2 mb-8">
-                <div className="flex items-center justify-center w-5/6">
                 <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5 bg-white rounded-none font-normal p-6 shadow-lg md:w-fit w-full">
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col justify-between bg-slate-50 border h-[500px] rounded-lg font-normal p-6 shadow-md md:w-fit w-full">
                     <div className="flex flex-row items-center justify-between">
                         <span className="text-xl font-normal">contact us</span>
                         <img src="/enemy.svg" alt="enemy.sh" className="h-6" />
@@ -195,7 +192,7 @@ export default function CtaSection() {
 
                     <div className="w-full flex flex-row">
                         <Button
-                        className="bg-black hover:bg-gray-700 rounded-none transition-all duration-200"
+                        className="bg-black hover:bg-gray-700 rounded-md transition-all duration-200"
                         type="submit"
                         disabled={loading}
                         >
@@ -204,8 +201,5 @@ export default function CtaSection() {
                     </div>
                     </form>
                 </Form>
-                </div>
-            </div>
-        </section>
     )
 }

@@ -18,7 +18,7 @@ const settings = {
   dots: false,
   infinite: true,
   speed: 500,
-  slidesToShow: 3,
+  slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000,
@@ -45,41 +45,43 @@ const settings = {
       }
     }
   ]
-}
+};
 
 const handleScrollToContact = () => {
-  const servicesSection = document.getElementById('contact')
+  const servicesSection = document.getElementById('contact');
   if (servicesSection) {
-    servicesSection.scrollIntoView({ behavior: 'smooth' }) // Smooth scrolling
+    servicesSection.scrollIntoView({ behavior: 'smooth' });
   }
-}
-
+};
 
 export default function ServicesCarousel({ services }: ServicesCarouselProps) {
   return (
-    <div className="w-full h-fit p-2 justify-center flex flex-col">
-    <Slider {...settings}>
-      {services.map((service, index) => (
-        <div key={index} className="p-2">
-        <div key={service.title} className="flex flex-col items-start h-fit text-gray-800 justify-start sm:w-auto gap-4 p-4 bg-gray-100">
-          <div className="flex flex-col items-start justify-between w-full">
-          <div className="flex flex-row items-start justify-between w-full">
-            <p className="text-lg font-semibold">{service.title}</p>
+    <div className="w-full overflow-hidden">
+      <Slider {...settings} className="w-full">
+        {services.map((service, idx) => (
+          <div key={idx} className="flex-shrink-0 w-full box-border">
+            <div className="flex flex-col items-start justify-start w-full gap-4 p-4 bg-slate-50 border rounded-md text-gray-800">
+              <div className="w-full flex justify-between items-start">
+                <p className="text-lg font-semibold">{service.title}</p>
+              </div>
+              <p className="text-gray-700 text-sm">{service.description}</p>
+              <div className="flex items-center gap-2">
+                <Button variant="ghost" onClick={handleScrollToContact}>
+                  learn more
+                </Button>
+              </div>
+              <div className="flex flex-wrap items-center gap-2">
+                {service.categories.map((cat, i) => (
+                  <span key={i} className="bg-black text-slate-200 rounded-md px-4 py-1 text-xs">
+                    {cat}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
-          <p className="text-gray-700 text-sm">{service.description}</p>
-          </div>
-          <div className="flex flex-row items-center justify-start w-full gap-2">
-          <Button variant={'ghost'} onClick={handleScrollToContact}>learn more</Button>
-          </div>
-          <div className="flex flex-row items-center justify-start w-full gap-2 flex-wrap">
-          {service.categories.map((category, index) => (
-            <div key={index} className="bg-black transition-all text-slate-200 px-4 py-1 text-xs">{category}</div>
-          ))}
-          </div>
-        </div>
-        </div>
-      ))}
-    </Slider>
+        ))}
+      </Slider>
     </div>
-  )
+  );
 }
+
