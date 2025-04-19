@@ -46,10 +46,10 @@ export default function Footer() {
               © 2025 enemy.sh. All rights reserved.
             </p>
             <div className="flex gap-4">
-              <Link href="#" className="text-sm text-muted-foreground hover:text-black transition-colors">
+              <Link href="https://github.com/enemy-sh" className="text-sm text-muted-foreground hover:text-black transition-colors">
                 GitHub
               </Link>
-              <Link href="#" className="text-sm text-muted-foreground hover:text-black transition-colors">
+              <Link href="https://linkedin.com/in/ericjpolanco" className="text-sm text-muted-foreground hover:text-black transition-colors">
                 LinkedIn
               </Link>
             </div>

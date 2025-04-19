@@ -4,6 +4,7 @@ import React from "react";
 import{ useState } from "react";
 import { Menu } from "lucide-react";
 import { GitHubLogoIcon } from "@radix-ui/react-icons"
+import { LinkedInLogoIcon } from "@radix-ui/react-icons"
 
 const handleScrollToServices = () => {
     const servicesSection = document.getElementById('services')
@@ -36,6 +37,9 @@ export default function Nav() {
                     <p onClick={handleScrollToContact} className="hover:cursor-pointer">contact</p>
                     <p onClick={() => window.open("https://github.com/enemy-sh", "_blank")} className="hover:cursor-pointer">
 			<GitHubLogoIcon />
+		    </p>
+                    <p onClick={() => window.open("https://linkedin.com/in/ericjpolanco", "_blank")} className="hover:cursor-pointer">
+		      <LinkedInLogoIcon />
 		    </p>
                 </div>
                 <div className="md:hidden">
