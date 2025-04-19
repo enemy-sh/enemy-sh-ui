@@ -119,13 +119,13 @@ const painPointsFour = [
     "deployment failures"
 ];
 
-const painPointsStyles = "px-1 text-sm text-center font-medium opacity-30" 
+const painPointsStyles = "px-1 text-xs sm:text-sm text-center font-medium opacity-30" 
 
 function InfoSection() {
   return (
     <div className="items-center flex flex-col justify-center" >
         <div className="flex flex-col items-center justify-center w-full max-w-7xl">
-            <div className="w-full flex gap-1 flex-col mb-4 relative">
+            <div className="w-full flex flex-col mb-4 relative">
                 <Slider {...settings2}>
                 {painPointsOne && painPointsOne.map((painPoint, index) => (
                 <div key={index}>

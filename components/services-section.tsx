@@ -76,14 +76,14 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="bg-white/70 w-full px-4 md:px-0 flex h-[70vh] justify-center items-center">
-      <div className="flex flex-row max-w-7xl justify-between items-center">
+    <section id="services" className=" w-full p-3 py-10 flex h-fit lg:h-[70vh] justify-center items-center">
+      <div className="flex flex-col lg:flex-row max-w-7xl justify-between items-center w-full gap-8">
       <div
-        className="w-1/2 max-w-7xl flex flex-col items-start justify-center"
+        className="w-full lg:w-1/2 max-w-7xl flex flex-col items-start justify-center"
       >
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start mb-8">
-          <div className="flex flex-col items-center md:items-start gap-2 text-left">
-            <p className="sm:text-4xl text-2xl">
+        <div className="flex flex-col md:flex-row items-start justify-center md:justify-start mb-8">
+          <div className="flex flex-col items-start gap-2 text-left px-2">
+            <p className="lg:text-4xl text-2xl md:text-3xl">
               we will focus on everything else so you can focus on whats
               important.
             </p>
@@ -95,7 +95,9 @@ export default function ServicesSection() {
           </div>
           <ServicesCarousel services={services} />
         </div>
-        <ContactForm />
+	<div className="px-2 w-full md:w-fit"> 
+          <ContactForm />
+	</div>
       </div>
     </section>
   );
