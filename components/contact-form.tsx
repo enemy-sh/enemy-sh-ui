@@ -135,7 +135,7 @@ export default function ContactForm() {
                             <FormItem className="w-full md:w-1/2">
                             <FormLabel>first name</FormLabel>
                             <FormControl>
-                                <Input placeholder="enter your first name" {...field} className="rounded-none" />
+                                <Input placeholder="enter your first name" {...field} className="rounded-md" />
                             </FormControl>
                             <FormMessage />
                             </FormItem>
@@ -148,7 +148,7 @@ export default function ContactForm() {
                             <FormItem className="w-full md:w-1/2">
                             <FormLabel>last name</FormLabel>
                             <FormControl>
-                                <Input placeholder="enter your last name" {...field} className="rounded-none" />
+                                <Input placeholder="enter your last name" {...field} className="rounded-md" />
                             </FormControl>
                             <FormMessage />
                             </FormItem>
@@ -165,7 +165,7 @@ export default function ContactForm() {
                             <Input
                                 placeholder="enter your email address"
                                 {...field}
-                                className="rounded-none"
+                                className="rounded-md"
                             />
                             </FormControl>
                             <FormMessage />
@@ -181,7 +181,7 @@ export default function ContactForm() {
                             <FormControl>
                             <Textarea
                                 placeholder="Tell us about your project or ask us a question."
-                                className="resize-none rounded-none"
+                                className="resize-none rounded-md"
                                 {...field}
                             />
                             </FormControl>

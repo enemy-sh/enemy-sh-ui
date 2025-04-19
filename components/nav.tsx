@@ -27,7 +27,7 @@ export default function Nav() {
 
     return (
         <div className="flex justify-center items-center p-4 sm:px-4 text-sm font-medium bg-white/70 border-b backdrop-blur-md fixed w-full top-0 z-50">
-            <div className="flex items-center gap-4 sm:w-5/6 w-full max-w-7xl justify-between">
+            <div className="flex items-center gap-4 w-full max-w-7xl justify-between">
                 <div className="text-3xl font-normal">
                     <img src="/enemy.svg" alt="enemy.sh" className="h-7 w-auto" />
                 </div>

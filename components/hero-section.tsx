@@ -20,21 +20,21 @@ export function HeroSection() {
   }
 
   return (
-    <section className="h-screen flex bg-white/70 flex-col w-full justify-center items-center bg-top text-black">
-      <div className="w-full max-w-7xl hero-section opacity-0 flex flex-row-reverse justify-between items-center gap-10">
-        <div className="flex flex-col items-start text-start justify-center gap-3 w-full h-full">
-            <h1 className="hero-title text-xl md:text-8xl font-semibold">
+    <section className="h-screen px-5 flex bg-white/70 flex-col w-full justify-center items-center bg-top text-black">
+      <div className="w-full max-w-7xl hero-section opacity-0 flex flex-col-reverse lg:flex-row-reverse justify-between items-center gap-0 lg:gap-10">
+        <div className="flex flex-col items-center text-center lg:items-start lg:text-start justify-center gap-3 w-full h-full">
+            <h1 className="hero-title text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-semibold">
 	       deploy your enemy
             </h1>                                    
-	    <p className='font-medium opacity-50 text-lg lowercase'> We eliminate the enemies of modern software delivery so you don't have to.</p>
-	    <div className='w-full flex justify-start'>
-              <div onClick={handleScrollToServices} className="flex-row gap-1 justify-center w-fit flex items-center font-semibold transition-all duration-300 text-black hover:cursor-pointer">
-                <span>get started</span>
-    	        <ArrowRight className='h-5' />
+	    <p className='font-medium opacity-50 text-xs md:text-lg w-full lowercase'> We eliminate the enemies of modern software delivery so you don't have to.</p>
+	    <div className='w-full flex'>
+              <div onClick={handleScrollToServices} className="flex-row gap-1 justify-center lg:justify-start items-center w-full flex font-semibold transition-all duration-300 text-black hover:cursor-pointer">
+                <span className='text-sm md:text-lg'>get started</span>
+    	        <ArrowRight className='h-4 md:h-5' />
               </div>
 	    </div>
           </div>
-	<img className="h-[800px]" src='hero-graphic.svg' alt='enemy.sh hero graphic'/>
+	<img className="h-fit w-full lg:w-4/6" src='hero-graphic.svg' alt='enemy.sh hero graphic'/>
       </div>
       <div className="w-full max-w-7xl relative opacity-0 hero-section mt-10">
         <InfoSection />

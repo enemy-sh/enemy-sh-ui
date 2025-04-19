@@ -119,7 +119,7 @@ const painPointsFour = [
     "deployment failures"
 ];
 
-const painPointsStyles = "bg-slate-50 px-1 rounded-sm text-sm text-center font-medium opacity-30";
+const painPointsStyles = "px-1 text-sm text-center font-medium opacity-30" 
 
 function InfoSection() {
   return (
