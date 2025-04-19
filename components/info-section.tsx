@@ -122,26 +122,9 @@ const painPointsFour = [
 const painPointsStyles = "bg-slate-50 px-1 rounded-sm text-sm text-center font-medium opacity-30";
 
 function InfoSection() {
-    const sectionRef = useRef(null);
-    useEffect(() => {
-        const sectionNode = sectionRef.current;
-        if (sectionNode) {
-            const observer = new IntersectionObserver(
-                ([entry]) => {
-                    if (entry.isIntersecting) {
-                        animate(sectionNode, { x: [100, 0], opacity: [0, 1] }, { duration: 1 });
-                        observer.disconnect(); 
-                    }
-                },
-                { threshold: 0.6 }
-            );
-            observer.observe(sectionNode);
-            return () => observer.disconnect();
-        }
-    }, []);
   return (
     <div className="items-center flex flex-col justify-center" >
-        <div ref={sectionRef} className="flex flex-col items-center justify-center w-full max-w-7xl opacity-0">
+        <div className="flex flex-col items-center justify-center w-full max-w-7xl">
             <div className="w-full flex gap-1 flex-col mb-4 relative">
                 <Slider {...settings2}>
                 {painPointsOne && painPointsOne.map((painPoint, index) => (
@@ -187,8 +170,8 @@ function InfoSection() {
                 </div>
                 ))}
                 </Slider>
-                <div className="inset-y-0 left-0 w-24 bg-gradient-to-r from-slate-50 to-transparent pointer-events-none z-10 absolute"></div>
-                <div className="inset-y-0 right-0 w-24 bg-gradient-to-l from-slate-50 to-transparent pointer-events-none z-10 absolute"></div>
+                <div className="inset-y-0 left-0 w-24 bg-gradient-to-r from-white/70 to-transparent pointer-events-none z-10 absolute"></div>
+                <div className="inset-y-0 right-0 w-24 bg-gradient-to-l from-white/70 to-transparent pointer-events-none z-10 absolute"></div>
             </div>
             <div className="flex flex-row items-center justify-center w-5/6 h-1/2">
                 <div className="flex flex-col items-center justify-center w-full gap-2"> 

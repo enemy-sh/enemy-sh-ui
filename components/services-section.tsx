@@ -10,74 +10,74 @@ const services = [
     title: "ci/cd pipeline automation",
     description:
       "we specialize in building automated ci/cd pipelines to streamline your software delivery.",
-    categories: ["devops"],
+    categories: ["continuous integration", "continuous deployment"],
   },
   {
     title: "kubernetes orchestration",
     description:
       "our experts deploy and manage kubernetes clusters for efficient container management.",
-    categories: ["container management", "devops"],
+    categories: ["container management", "orchestration"],
   },
   {
     title: "infrastructure as code",
     description:
       "we utilize iac tools for automated provisioning and infrastructure management.",
-    categories: ["devops"],
+    categories: ["iac"],
   },
   {
     title: "cloud migration and integration",
     description:
       "seamless migration and integration of your services to the cloud with devops best practices.",
-    categories: ["devops", "cloud services"],
+    categories: ["cloud services"],
   },
   {
     title: "devops strategy consulting",
     description:
       "tailored devops strategies to enhance your development and operations collaboration.",
-    categories: ["consulting", "devops"],
+    categories: ["consulting"],
   },
   {
     title: "monitoring, observability, and metrics",
     description:
       "implement comprehensive monitoring and observability to gain insights into your system's performance.",
-    categories: ["operations", "devops"],
+    categories: ["observability"],
   },
   {
     title: "cloud security and compliance",
     description:
       "implementing devsecops practices to ensure cloud security and compliance.",
-    categories: ["security", "devops"],
+    categories: ["security"],
   },
   {
     title: "cost management and optimization",
     description:
       "optimize your cloud costs with our expert analysis and devops strategies.",
-    categories: ["performance", "devops"],
+    categories: ["performance"],
   },
   {
     title: "serverless application development",
     description:
       "design and deploy serverless applications for scalable and cost-effective solutions.",
-    categories: ["devops", "serverless"],
+    categories: ["serverless"],
   },
   {
     title: "microservices architecture",
     description:
       "transition to a microservices architecture for flexibility and rapid deployment cycles.",
-    categories: ["architecture", "devops"],
+    categories: ["architecture"],
   },
   {
     title: "containerization and management",
     description:
       "efficiently containerize applications to enhance reliability and scalability.",
-    categories: ["container management", "devops"],
+    categories: ["container management"],
   },
 ];
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="bg-slate-50 w-full px-4 md:px-0 flex h-[50vh] justify-center items-center">
-      <div className="flex flex-row max-w-7xl gap-5 justify-between items-center">
+    <section id="services" className="bg-white/70 w-full px-4 md:px-0 flex h-[70vh] justify-center items-center">
+      <div className="flex flex-row max-w-7xl justify-between items-center">
       <div
         className="w-1/2 max-w-7xl flex flex-col items-start justify-center"
       >

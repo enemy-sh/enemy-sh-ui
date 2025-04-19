@@ -26,7 +26,7 @@ export default function Nav() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="flex justify-center items-center p-4 sm:px-4 text-sm font-medium bg-slate-50 border-b bg-opacity-80 backdrop-blur-md fixed w-full top-0 z-50">
+        <div className="flex justify-center items-center p-4 sm:px-4 text-sm font-medium bg-white/70 border-b backdrop-blur-md fixed w-full top-0 z-50">
             <div className="flex items-center gap-4 sm:w-5/6 w-full max-w-7xl justify-between">
                 <div className="text-3xl font-normal">
                     <img src="/enemy.svg" alt="enemy.sh" className="h-7 w-auto" />

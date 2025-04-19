@@ -60,7 +60,7 @@ export default function ServicesCarousel({ services }: ServicesCarouselProps) {
       <Slider {...settings} className="w-full">
         {services.map((service, idx) => (
           <div key={idx} className="flex-shrink-0 w-full box-border">
-            <div className="flex flex-col items-start justify-start w-full gap-4 p-4 bg-slate-50 border rounded-md text-gray-800">
+            <div className="flex flex-col items-start justify-start w-full gap-4 p-4 bg-white/70 border rounded-md text-gray-800">
               <div className="w-full flex justify-between items-start">
                 <p className="text-lg font-semibold">{service.title}</p>
               </div>
