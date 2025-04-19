@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-   <footer className="border-t border-white/20 bg-black text-white backdrop-blur-md items-center flex flex-col">
+   <footer className="border-t border-white/20 bg-black text-white backdrop-blur-md items-center flex flex-col px-5">
         <div className="container flex flex-col max-w-7xl gap-6 py-8 md:flex-row md:items-center md:justify-between md:py-12">
           <div className="flex flex-col gap-2">
             <Link href="#" className="text-lg font-semibold flex items-center gap-1">
@@ -41,7 +41,7 @@ export default function Footer() {
          </nav>
         </div>
         <div className="border-t border-white/20 py-6 w-full max-w-7xl">
-          <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
+          <div className="w-full flex flex-col items-center justify-between gap-4 md:flex-row">
             <p className="text-center text-sm text-muted-foreground md:text-left">
               © 2025 enemy.sh. All rights reserved.
             </p>
