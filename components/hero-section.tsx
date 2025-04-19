@@ -1,112 +1,43 @@
 'use client'
 
 import { useEffect } from 'react'
-import Slider from 'react-slick';
-import { Typewriter } from 'react-simple-typewriter'
 import { animate } from 'motion'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import { ArrowRight } from 'lucide-react';
+import InfoSection from './info-section';
 
 export function HeroSection() {
   useEffect(() => {
-    animate('.hero-title', { opacity: [0, 1], x: [-100, 0] }, { delay: 1, duration: 0.8 })
-    animate('.hero-description', { opacity: [0, 1], x: [-100, 0] }, { delay: 1, duration: 0.8 })
-    animate('.hero-button', { opacity: [0, 1], y: [50, 0] }, { delay: 1 , duration: 0.8 })
+    animate('.hero-section', { opacity: [0, 1], y: [100, 0] }, { duration: 0.5 })
   }, [])
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 3500,
-    slidesToShow: 10,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 0,
-    cssEase: 'ease',
-    pauseOnHover: false,
-    arrows: false,
-    centerMode: false,
-    variableWidth: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 5,
-        }
-      },
-      {
-        breakpoint: 700,
-        settings: {
-          slidesToShow: 3,
-        }
-      },
-    ]
-  }
-
-  const devOpsPlatforms = [
-    { name: "GitLab", logo: "gitlab.png" },
-    { name: "AWS", logo: "aws.png" },
-    { name: "GitHub", logo: "github_actions.png" },
-    { name: "Azure", logo: "azure.png" },
-    { name: "Google Cloud", logo: "gcp.svg" },
-    { name: "Terraform", logo: "terraform.png" },
-    { name: "Docker", logo: "docker.webp" },
-    { name: "Kubernetes", logo: "kubernetes.png" },
-    { name: "Jenkins", logo: "jenkins.png" },
-    { name: "Bitbucket", logo: "bitbucket.png" },
-    { name: "Pulumi", logo: "pulumi.png" },
-    { name: "Helm", logo: "helm.svg" },
-  ]
-  
   const handleScrollToServices = () => {
     const servicesSection = document.getElementById('services')
     if (servicesSection) {
-      servicesSection.scrollIntoView({ behavior: 'smooth' }) // Smooth scrolling
+      servicesSection.scrollIntoView({ behavior: 'smooth' }) 
     }
   }
 
   return (
-    <section className="h-screen flex flex-col items-center bg-slate-50 justify-center bg-dots bg-top text-black">
-      <div className="text-center px-4 z-10 mb-48 mt-52">
-        <h1 className="hero-title text-3xl md:text-5xl font-light mb-4 opacity-0">
-          <span className='text-red-600'>$ {' '}</span>
-            <Typewriter
-              words={['deploy your enemy']}
-              cursor
-              cursorStyle="_"
-              typeSpeed={100}
-              delaySpeed={1000}
-            />
-        </h1>                                    
-        <p className="hero-description text-gray-800 text-sm md:text-md mb-8 opacity-0">
-          <Typewriter
-            words={[
-              "turning challenges into allies",
-            ]}
-            cursorStyle="_"
-            typeSpeed={100}
-            deleteSpeed={50}
-            delaySpeed={1000}
-          />
-        </p>
-          <div onClick={handleScrollToServices} className="hero-button inline-flex items-center bg-black px-4 py-2 font-normal hover:bg-gray-700 transition-all duration-300 text-white opacity-0 hover:cursor-pointer">
-            get started
-          </div>
-      </div>
-      <div className="w-full relative hero-description opacity-0">
-        <Slider {...settings}>
-          {devOpsPlatforms.map((platform, index) => (
-            <div key={index} className="px-2 ">
-              <div className="flex items-center justify-center h-22 p-4 rounded-lg ">
-                <img src={platform.logo} alt={platform.name} className="w-32 h-10 object-contain" />
+    <section className="min-h-fit lg:h-screen p-5 mt-5 sm:mt-0 flex bg-white/70 flex-col w-full justify-center items-center bg-top text-black">
+      <div className="w-full max-w-7xl hero-section opacity-0 flex flex-col-reverse lg:flex-row-reverse justify-between items-center gap-0 lg:gap-10">
+        <div className="flex flex-col items-center text-center lg:items-start lg:text-start justify-center gap-3 w-full h-full">
+            <h1 className="hero-title text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-semibold">
+	       deploy your enemy
+            </h1>                                    
+	    <p className='font-medium opacity-50 text-xs md:text-lg w-full lowercase'> We eliminate the enemies of modern software delivery so you don't have to.</p>
+	    <div className='w-full flex'>
+              <div onClick={handleScrollToServices} className="flex-row gap-1 justify-center lg:justify-start items-center w-full flex font-semibold transition-all duration-300 text-black hover:cursor-pointer">
+                <span className='text-sm md:text-lg'>get started</span>
+    	        <ArrowRight className='h-4 md:h-5' />
               </div>
-            </div>
-          ))}
-        </Slider>
-        {/* Left gradient overlay */}
-        <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-slate-50 to-transparent pointer-events-none"></div>
-        {/* Right gradient overlay */}
-        <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-slate-50 to-transparent pointer-events-none"></div>
+	    </div>
+          </div>
+	<img className="h-fit w-full lg:w-4/6" src='hero-graphic.svg' alt='enemy.sh hero graphic'/>
+      </div>
+      <div className="w-full max-w-7xl relative opacity-0 hero-section mt-10">
+        <InfoSection />
       </div>
     </section>
   )

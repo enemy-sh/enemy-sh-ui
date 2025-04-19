@@ -1,19 +1,60 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-50 bg-dots">
-        <div className="flex flex-col items-center justify-center min-h-2.5">
-            <div className="flex flex-col items-center text-xs justify-center w-5/6 h-1/2">
-              <div className="flex flex-row items-center gap-2">
-                  <img src="/enemy.sh.icon.svg" alt="enemy.sh" className="h-10" />
-                  <div className="flex flex-col">
-                    <span className="text-gray-700">© 2025 enemy.sh</span>
-                    <span className="text-gray-700">all rights reserved.</span>
-                  </div>
-              </div>
+   <footer className="border-t border-white/20 bg-black text-white backdrop-blur-md items-center flex flex-col px-5">
+        <div className="container flex flex-col max-w-7xl gap-6 py-8 md:flex-row md:items-center md:justify-between md:py-12">
+          <div className="flex flex-col gap-2">
+            <Link href="#" className="text-lg font-semibold flex items-center gap-1">
+	      <img src="enemy-white.svg" alt="enemy.sh logo" className="h-4"/>
+              <span className="text-sm">enemy.sh</span>
+            </Link>
+            <p className="text-sm text-muted-foreground">deploy your enemy.</p>
+          </div>
+          <nav className="grid grid-cols-2 gap-8">
+            <div className="space-y-3">
+              <h3 className="text-sm font-medium">Platform</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="#" className="text-sm hover:text-black transition-colors">
+                    Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="text-sm hover:text-black transition-colors">
+                    FAQ
+                  </Link>
+                </li>
+              </ul>
             </div>
+            <div className="space-y-3">
+              <h3 className="text-sm font-medium">Company</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="#" className="text-sm hover:text-black transition-colors">
+                    About
+                  </Link>
+                </li>
+              </ul>
+            </div>
+         </nav>
         </div>
-    </footer>
+        <div className="border-t border-white/20 py-6 w-full max-w-7xl">
+          <div className="w-full flex flex-col items-center justify-between gap-4 md:flex-row">
+            <p className="text-center text-sm text-muted-foreground md:text-left">
+              © 2025 enemy.sh. All rights reserved.
+            </p>
+            <div className="flex gap-4">
+              <Link href="https://github.com/enemy-sh" className="text-sm text-muted-foreground hover:text-black transition-colors">
+                GitHub
+              </Link>
+              <Link href="https://linkedin.com/in/ericjpolanco" className="text-sm text-muted-foreground hover:text-black transition-colors">
+                LinkedIn
+              </Link>
+            </div>
+          </div>
+        </div>
+      </footer>
   )
 }

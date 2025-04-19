@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Funnel_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import Nav from "@/components/nav";
 
-const funnelSans = Funnel_Sans({
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
 })
@@ -22,8 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${funnelSans.className} antialiased`}
+        className={`${inter.className} antialiased`}
       >
+        <Nav />
         {children}
       </body>
     </html>
