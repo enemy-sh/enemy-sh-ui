@@ -26,7 +26,7 @@ export function HeroSection() {
             <h1 className="hero-title text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-semibold">
 	       deploy your enemy
             </h1>                                    
-	    <p className='font-medium opacity-50 text-xs md:text-lg w-full lowercase'> We eliminate the enemies of modern software delivery so you don't have to.</p>
+	    <p className='font-medium opacity-50 text-xs md:text-lg w-full lowercase'> We eliminate the enemies of modern software delivery so you don&#39;t have to.</p>
 	    <div className='w-full flex'>
               <div onClick={handleScrollToServices} className="flex-row gap-1 justify-center lg:justify-start items-center w-full flex font-semibold transition-all duration-300 text-black hover:cursor-pointer">
                 <span className='text-sm md:text-lg'>get started</span>
