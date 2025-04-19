@@ -11,6 +11,7 @@ export default {
   	extend: {
 		backgroundImage: {
 			"dots": "url('/dots.svg')",
+			"hero": "url('/hero-bg.png')",
 		},
   		colors: {
   			background: 'hsl(var(--background))',
