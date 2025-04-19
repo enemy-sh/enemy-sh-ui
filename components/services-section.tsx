@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React  from "react";
 import ServicesCarousel from "./ui/services-carousel";
-import { animate } from "motion";
 import ContactForm from "./contact-form";
 
 const services = [
