@@ -122,7 +122,7 @@ export default function ContactForm() {
 
     return (
                 <Form {...form}>
-                    <form id="contact" onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col justify-between bg-white/70 border h-[500px] rounded-lg font-normal p-6 shadow-md md:w-fit w-full">
+                    <form id="contact" onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col justify-between bg-white/70 border h-[500px] rounded-lg font-normal p-6 md:w-fit w-full">
                     <div className="flex flex-row items-center justify-between">
                         <span className="text-xl font-normal">contact us</span>
                         <img src="/enemy.svg" alt="enemy.sh" className="h-6" />
