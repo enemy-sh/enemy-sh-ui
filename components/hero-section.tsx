@@ -20,7 +20,7 @@ export function HeroSection() {
   }
 
   return (
-    <section className="min-h-fit lg:h-screen p-5 mt-5 sm:mt-0 flex bg-white/70 flex-col w-full justify-center items-center bg-top text-black">
+    <section className="min-h-fit lg:h-screen p-5 mt-5 sm:mt-0 flex flex-col w-full justify-center items-center text-black">
       <div className="w-full max-w-7xl hero-section opacity-0 flex flex-col-reverse lg:flex-row-reverse justify-between items-center gap-0 lg:gap-10">
         <div className="flex flex-col items-center text-center lg:items-start lg:text-start justify-center gap-3 w-full h-full">
             <h1 className="hero-title text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-semibold">
@@ -34,7 +34,7 @@ export function HeroSection() {
               </div>
 	    </div>
           </div>
-	<img className="h-fit w-full lg:w-4/6" src='hero-graphic.svg' alt='enemy.sh hero graphic'/>
+	<img className="h-fit w-full lg:w-4/6" src='hero-graphic.png' alt='enemy.sh hero graphic'/>
       </div>
       <div className="w-full max-w-7xl relative opacity-0 hero-section mt-10">
         <InfoSection />

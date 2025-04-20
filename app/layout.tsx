@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} antialiased`}
+        className={`${inter.className} antialiased bg-hero bg-cover bg-no-repeat bg-center`}
       >
         <Nav />
         {children}
