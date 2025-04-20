@@ -34,7 +34,7 @@ export function HeroSection() {
               </div>
 	    </div>
           </div>
-	<img className="h-fit w-full lg:w-4/6" src='hero-graphic.svg' alt='enemy.sh hero graphic'/>
+	<img className="h-fit w-full lg:w-4/6" src='hero-graphic.png' alt='enemy.sh hero graphic'/>
       </div>
       <div className="w-full max-w-7xl relative opacity-0 hero-section mt-10">
         <InfoSection />
