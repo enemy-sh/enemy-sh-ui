@@ -69,7 +69,7 @@ const painPointsRows = [
   },
 ];
 
-const painPointClass = "px-1 text-xs sm:text-sm text-center text-red-500 font-medium";
+const painPointClass = "px-1 text-xs sm:text-sm text-center opacity-30 font-medium";
 
 function MarqueeRow({
   items,
@@ -116,7 +116,7 @@ export default function InfoSection() {
   return (
     <>
       <div className="flex flex-col items-center justify-center">
-        <div className="relative w-full max-w-7xl space-y-1 p-4 border bg-black rounded-md mb-4">
+        <div className="relative w-full space-y-1 p-4 rounded-md mb-4">
           {painPointsRows.map((row, idx) => (
             <MarqueeRow
               key={idx}
@@ -126,8 +126,6 @@ export default function InfoSection() {
             />
           ))}
 
-          <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-black rounded-md to-transparent pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-l from-black rounded-md to-transparent pointer-events-none" />
         </div>
 
         <p className="text-xs text-black opacity-30">
